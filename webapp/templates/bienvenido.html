@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido</title>
+</head>
+
+<body>
+    <h1>Bienvenido a tu primer sistema creado con Django</h1>
+
+    <!-- <div>
+        {{msg1}}
+    </div>
+    <div>
+        {{msg2}}
+    </div> -->
+    <div>
+        Número de personas: {{no_personas}}
+    </div>
+
+    <div>
+        <a href="nueva_persona">Agregar persona</a>
+    </div>
+
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Email</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for persona in personas %}
+                <tr>
+                    <td> {{persona.id}} </td>
+                    <td> {{persona.nombre}} {{persona.apellido}} </td>
+                    <td> {{persona.email}} </td>
+                    <td> <a href="detalle_persona/{{persona.id}}">Ver </a></td>
+                    <td><a href="editar_persona/{{persona.id}}">Editar</a></td>
+                    <td><a href="eliminar_persona/{{persona.id}}">Eliminar</a></td>
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+
+</html>
